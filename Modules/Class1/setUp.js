@@ -89,10 +89,4 @@
  * 4. Using "git commit" command, add commit for the added files
  * 5. Using "git push" command, push the added files/folders into github.
  * 
- * 
- * 
- * 
- * 
- * 
- * 
  */
