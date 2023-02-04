@@ -139,23 +139,14 @@ let charAt_AfterSpace = sentence3.charAt(indexOf_Space+1);
 let result3_2 = charAt_AfterSpace.localeCompare('k') === 0;
 console.log(`result3_2 --> ${result3_2}`);
 
-
-function insertionSort(arr) {
-    for (let i=1 ; i < arr.length ; i++) {
-        let nti = arr[i];
-        for (let j=i-1 ; j >= 0 ; j--) {
-            if (arr[j] > nti) {
-                arr[j+1] = arr[j];
-            } else {
-                arr[j+1] = nti;
-                break;
-            }
-        }
+function towerOfHanoi(n, fromRod, toRod, usingRod) {
+    if (n === 1) {
+        console.log(`Move disk-1 from ${fromRod} to ${toRod}`);
+        return
     }
-    return arr;
+    towerOfHanoi(n-1, fromRod, usingRod, toRod);
+    console.log(`Move disk-${n} from ${fromRod} to ${toRod}`);
+    towerOfHanoi(n-1, usingRod, toRod, fromRod);
 }
 
-console.log(`insertionSort([-6, 20, 8, -2, 4]) -> ${insertionSort([-6, 20, 8, -2, 4])}`);
-
-
-
+towerOfHanoi(4, 'A', 'C', 'B')
