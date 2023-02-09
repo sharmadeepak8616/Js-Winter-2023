@@ -150,3 +150,95 @@ function towerOfHanoi(n, fromRod, toRod, usingRod) {
 }
 
 towerOfHanoi(4, 'A', 'C', 'B')
+
+console.log('\nSet\n');
+
+const mySet1 = new Set();                       // creates empty set with no-value
+const mySet2 = new Set([1, 2, 3]);              // creates set with with value (1,2,3)
+const mySet3 = new Set([1, 2, 3, 1]);           // creates set with with value (1,2,3) (ignore the duplicate values)
+
+
+for (const item of mySet3) {
+    console.log(item);
+}
+
+console.log('\nadd()\n');
+console.log(mySet3);            // { 1, 2, 3 }
+console.log(mySet3.add(4));     // { 1, 2, 3, 4 }
+console.log(mySet3.add(5));     // { 1, 2, 3, 4, 5 }
+console.log(mySet3.add(6));     // { 1, 2, 3, 4, 5, 6 }
+console.log(mySet3);            // { 1, 2, 3, 4, 5, 6 }
+
+// console.log(mySet1);
+// console.log(mySet2);
+
+console.log('\nhas()\n');
+console.log(mySet3);            // { 1, 2, 3, 4, 5, 6 }
+console.log(mySet3.has(4));     // true
+console.log(mySet3.has(7));     // false
+
+console.log('\ndelete()\n');
+console.log(mySet3);            // { 1, 2, 3, 4, 5, 6 }
+console.log(mySet3.delete(4));  // true (deleted successfully)
+console.log(mySet3.delete(14))  // false (data not present in Set)
+console.log(mySet3.delete(4));  // false (data not present in Set)
+console.log(mySet3);            // { 1, 2, 3, 5, 6 }
+
+
+console.log('\nsize()\n');
+console.log(mySet3);            // { 1, 2, 3, 5, 6 }
+console.log(mySet3.size);       // 5
+
+console.log('\nclear()\n');
+console.log(mySet3);            // { 1, 2, 3, 4, 5, 6 }
+mySet3.clear()
+console.log(mySet3);            // {}
+
+console.log('\nMAP\n');
+
+const myMap1 = new Map();                       // creates empty Map
+const myMap2 = new Map([[1,2], [2,3], [3,4]]);  // { 1 => 2, 2 => 3, 3 => 4 }
+const myMap3 = new Map([['a',1], ['b',2]]);     // { 'a' => 1, 'b' => 2 }
+// a,b are the keys with value 1 and 2 respectively
+
+console.log(myMap1);
+console.log(myMap2);
+console.log(myMap3);
+
+
+for (const [key, value] of myMap3) {
+    console.log(`${key} : ${value}`);
+}
+
+console.log('\nset()\n');
+console.log(myMap3);                // { 'a' => 1, 'b' => 2 }
+console.log(myMap3.set('c', 3));    // { 'a' => 1, 'b' => 2, 'c' => 3 }
+console.log(myMap3.set('d', 4));    // { 'a' => 1, 'b' => 2, 'c' => 3, 'd' => 4 }
+console.log(myMap3.set('e', 3));    // { 'a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 3 }
+console.log(myMap3);                // { 'a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 3 }
+
+console.log('\nhas()\n');
+console.log(myMap3);
+console.log(myMap3.has(1));         // false (1 is not present as one of the keys)
+console.log(myMap3.has('a'));       // true ('a' is present as one of the keys)
+console.log(myMap3.has('A'));       // false ('A' is not present as one of the keys)
+
+
+console.log('\ndelete()\n');
+console.log(myMap3);                // { 'a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 3 }
+console.log(myMap3.delete('b'));    // true (delete the pair with key='b')
+console.log(myMap3.delete('a'));    // true (delete the pair with key='a')
+console.log(myMap3.delete('f'));    // false ('f' is not present as one of the keys)
+console.log(myMap3.delete('C'));    // false ('C' is not present as one of the keys)
+console.log(myMap3);                // { 'c' => 3, 'd' => 4, 'e' => 3 }
+
+
+
+console.log('\nsize\n');
+console.log(myMap3);                // { 'c' => 3, 'd' => 4, 'e' => 3 }
+console.log(myMap3.size);           // 3
+
+console.log('\nclear\n');
+console.log(myMap3);                // { 'c' => 3, 'd' => 4, 'e' => 3 }
+myMap3.clear();
+console.log(myMap3);                // {}

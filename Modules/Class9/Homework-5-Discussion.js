@@ -106,3 +106,7 @@ if (planets[0].localeCompare('Earth') === 0) {
     planets.unshift('Earth');
     console.log(planets);
 }
+
+/**
+ * Checking if Earth is present at correct place in planets-array, if not adding it.
+ */

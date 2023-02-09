@@ -72,7 +72,7 @@ console.log('Hello World');     // count = 15    count=11   count <= 15  count++
 
 console.log('\n\n for-loop \n\n');
 
-for (let count=11 ; count <= 15 ; count++) {
+for (let count=20 ; count <= 15 ; count++) {
     console.log('Hello World');
 }
 
