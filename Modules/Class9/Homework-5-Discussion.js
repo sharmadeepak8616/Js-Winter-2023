@@ -108,5 +108,5 @@ if (planets[0].localeCompare('Earth') === 0) {
 }
 
 /**
- * Checking if Earth is present at correct place in planets-array, if not adding it.
+ * Checking if Earth is present at index-0 in planets-array, if not adding it.
  */
