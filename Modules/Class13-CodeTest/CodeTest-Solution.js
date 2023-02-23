@@ -10,7 +10,7 @@
  */
 console.log('\nQ1');
 const arr1 = [21, 32, 12, 43, 45, 65, 12];
-const num1 = 12;
+const num1 = 32;
 let arr1Result = [];        // final ans should be in this variable (get values in arr1Result from arr1 which are NOT equals to num1)
 
 for (const num of arr1) {
@@ -22,6 +22,22 @@ for (const num of arr1) {
 console.log(arr1);          // [21, 32, 12, 43, 45, 65, 12];
 console.log(arr1Result);    // [21, 32, 43, 45, 65];
 
+/*
+    [21, 32, 12, 43, 45, 65, 12];       []
+
+    [0]
+    if ([0] !== num1)
+        push [0] in arr1Result
+    
+    [1]
+    if ([1] !== num1)
+        push [1] in arr1Result
+
+    [2]
+    if ([2] !== num1)
+        push [2] in arr1Result
+
+*/
 
 /**
  * Q2: Write code to calculate the total of all balances in the accounts-array
@@ -85,15 +101,25 @@ const accounts = [
         balance: 1200
     },
 ]
+// [{}, v2, v3, v4]
 let total = 0;                  // final ans should be in this variable
 
 for (const account of accounts) {
-    total += account.balance;
+    total += account.balance;       // total = total + account.balance
 }
 
 console.log(`Total of all balances in the accounts array: ${total}`);
 
+/*
+    balance=1000, balance=2000, balance=3000
+    total = 0
+    total = total + balance // 1000
 
+    total = total + balance // 1000 + 2000 = 3000
+
+    total = total + balance // 3000 + 3000 = 6000
+
+*/
 
 /**
  * Write code to find the index of second-occurrence of 'baSeBalL' (ignoring cases) in the arr3-array
@@ -133,3 +159,34 @@ if (count !== 2) {
 
 console.log(arr3);
 console.log(`the index of second-occurrence of 'baSeBalL' (ignoring cases) in the arr3-array : ${arr3Result}`);
+
+/**
+ * [0]
+ * if ([0] === 'baseball')
+ *      count++
+ *      if (count === 2) {
+ *          arr3Result = 0;
+ *      }
+ * }
+ * 
+ * [1]
+ * if ([1] === 'baseball')
+ *      count++
+ *      if (count === 2) {
+ *          arr3Result = 1;
+ *      }
+ * }
+ * 
+ * [2]
+ * if ([0] === 'baseball')
+ *      count++
+ *      if (count === 2) {
+ *          arr3Result = 0;
+ *      }
+ * 
+ * if ([0] === 'baseball')
+ *      count++
+ *      if (count === 2) {
+ *          arr3Result = 0;
+ *      }
+ */
