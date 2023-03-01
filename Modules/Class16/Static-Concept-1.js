@@ -16,10 +16,12 @@
  * 
  * To use static variable/function:
  *      we have to use ClassName instead objectName or this-operator.
+ * To use non-static variable/function:
+ *      we have to objectName (when using outside the class) or this-operator (when using inside the class).
  * 
- * If the purpose (or action) should be done by every student,
+ * 
+ * If the purpose (or action) should be done by every student individually,
  *      then function should be NON-Static
- * 
  * If the purpose (or action) should be the entity in general
  *      then function should be Static
  */

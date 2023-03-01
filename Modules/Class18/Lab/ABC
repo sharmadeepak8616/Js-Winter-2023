@@ -1,0 +1,21 @@
+class ABC {
+
+    constructor(num, name) {
+        console.log(`Constructor function\nnum = ${num}\nname = ${name}`);
+    }
+
+    var1 = 10;
+    static var2 = 20;
+
+    func1() {
+        // code
+    }
+
+    static func2() {
+
+    }
+
+
+
+}
+module.exports = ABC;

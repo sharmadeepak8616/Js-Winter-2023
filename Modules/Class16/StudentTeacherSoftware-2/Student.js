@@ -98,5 +98,6 @@ class Student {
         console.log(`\n\nMsg from Class 2023:\n${msg}`);
     }
 
+
 }
 module.exports = Student;

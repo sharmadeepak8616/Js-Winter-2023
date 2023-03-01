@@ -1,6 +1,8 @@
 
 // Due date: Jan 30 (eod)
 
+const Student = require("../Class18/StudentTeacherSoftware-4/Student");
+
 /**
  * Q1: Find if the user has provided only first name and last Name
  * 
@@ -41,3 +43,9 @@ console.log(`abbr -> ${abbr}`);     // YNWA
  * Q3: Count the number of words in the sentence
  */
 let sentence3 = 'CompreheNSIVe UP-to-DATE neWs CoverAgE, aggRegateD frOM soURCeS alL oVeR tHE wORld by GOOgle NeWs.';
+
+
+
+const student1 = new Student('Kiara', 22, "Web DeveloPMEnT");
+student1.changeCourse('');
+student1.changeName('');
