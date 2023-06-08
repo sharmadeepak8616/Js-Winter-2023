@@ -1,11 +1,8 @@
 /**
  * chai
  *      is a third-party library
- *      is getting used to write the testcases
- * 
- * 
- *      describe - refers to the feature we are testing
- *      it - refers to one of the testcases for a feature
+ *      is getting used to write the verification steps in the testcases
+
  *      expect - refers to the one of the steps in a testcase where we compare actual vs expected result
  * 
  */
